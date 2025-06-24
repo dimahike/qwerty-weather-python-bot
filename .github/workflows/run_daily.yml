@@ -1,0 +1,11 @@
+name: Daily Qwerty Weather Bot
+
+on: 
+    push:
+
+jobs:
+    Daily-run:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
