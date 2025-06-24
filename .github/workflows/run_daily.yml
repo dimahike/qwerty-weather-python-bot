@@ -1,14 +1,17 @@
 name: Daily Qwerty Weather Bot
 
-on: 
-    push:
+on:
+  push:
 
 jobs:
-    Daily-run:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
+  Daily-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-            - name: Run App
-              run: python app.py
+      - name: Install Dependencies
+        run: pip3 install -r requirements.txt
+
+      - name: Run App
+        run: python3 app.py
